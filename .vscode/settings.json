@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Bubble-Escape.sln"
+    "dotnet.defaultSolution": "Jump-Froggy.sln"
 }

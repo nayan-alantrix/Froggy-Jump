@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 8583833500387537569}
   - component: {fileID: 9149488937484720424}
   - component: {fileID: -2477409818323526515}
-  - component: {fileID: 4822062607815467244}
   m_Layer: 5
-  m_Name: Bubbles
+  m_Name: Leaf
   m_TagString: Bubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21960784, g: 0.5568628, b: 0.23529412, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -93,19 +92,3 @@ MonoBehaviour:
   speed: 1
   destroyY: -10
   rectTransform: {fileID: 8222649403700428188}
---- !u!58 &4822062607815467244
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3233009119517755644}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 58.38

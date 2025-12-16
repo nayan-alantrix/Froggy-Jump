@@ -27,6 +27,9 @@ public class UIManager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private Sprite soundSprite;
+    [SerializeField] private Sprite soundMuteSprite;
+
     private int volume = 1;
 
     //player prefs key
@@ -45,6 +48,8 @@ public class UIManager : MonoBehaviour
         volume = PlayerPrefs.GetInt(volumeKey, 1);
         musicSource.volume = volume;
         sfxSource.volume = volume;
+        if(volume == 1) volumeBtn.image.sprite = soundSprite;
+        else volumeBtn.image.sprite = soundMuteSprite;
         //settingUp button listeners
         playBtn.onClick.AddListener(()=>{
             gameManger.OnGameStart();
@@ -54,6 +59,16 @@ public class UIManager : MonoBehaviour
 
         volumeBtn.onClick.AddListener(() =>
         {
+            if(volume == 0)
+            {
+                volume = 1;
+                volumeBtn.image.sprite = soundSprite;
+            }
+            else
+            {
+                volume = 0;
+                volumeBtn.image.sprite = soundMuteSprite;
+            }
             musicSource.volume = volume;
             sfxSource.volume = volume;
             PlayerPrefs.SetInt(volumeKey, volume);

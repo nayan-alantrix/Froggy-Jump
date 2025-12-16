@@ -1712,7 +1712,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 75
+  m_fontSize: 36.3
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2248,7 +2248,7 @@ RectTransform:
   - {fileID: 2119471230}
   - {fileID: 835790668}
   m_Father: {fileID: 2076996948}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -4002,7 +4002,7 @@ RectTransform:
   - {fileID: 116904738}
   - {fileID: 235793552}
   m_Father: {fileID: 2076996948}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -4145,6 +4145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubbles (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3233009119517755644, guid: 63bb2b499b0ba4612977db6e8f053817, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8222649403700428188, guid: 63bb2b499b0ba4612977db6e8f053817, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4228,6 +4232,14 @@ PrefabInstance:
     - target: {fileID: 8222649403700428188, guid: 63bb2b499b0ba4612977db6e8f053817, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9149488937484720424, guid: 63bb2b499b0ba4612977db6e8f053817, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 9149488937484720424, guid: 63bb2b499b0ba4612977db6e8f053817, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5254902
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63bb2b499b0ba4612977db6e8f053817, type: 3}
@@ -4366,6 +4378,8 @@ MonoBehaviour:
   gameOver_homeBtn: {fileID: 0}
   musicSource: {fileID: 1433016383}
   sfxSource: {fileID: 969124238}
+  soundSprite: {fileID: 21300000, guid: 04d7e49b3375d448a9886d89bd4a1e20, type: 3}
+  soundMuteSprite: {fileID: 21300000, guid: 873e0eda85abc473abae3db624ecaec2, type: 3}
 --- !u!1 &1670174809
 GameObject:
   m_ObjectHideFlags: 0
@@ -4776,6 +4790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubbles
       objectReference: {fileID: 0}
+    - target: {fileID: 3233009119517755644, guid: 63bb2b499b0ba4612977db6e8f053817, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8222649403700428188, guid: 63bb2b499b0ba4612977db6e8f053817, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4859,6 +4877,14 @@ PrefabInstance:
     - target: {fileID: 8222649403700428188, guid: 63bb2b499b0ba4612977db6e8f053817, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9149488937484720424, guid: 63bb2b499b0ba4612977db6e8f053817, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 9149488937484720424, guid: 63bb2b499b0ba4612977db6e8f053817, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5254902
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63bb2b499b0ba4612977db6e8f053817, type: 3}
@@ -5014,9 +5040,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8697548513271846259}
   - {fileID: 1569400314}
   - {fileID: 852968628}
+  - {fileID: 8697548513271846259}
   - {fileID: 1506421834}
   m_Father: {fileID: 1662331323}
   m_RootOrder: 0
@@ -5404,6 +5430,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 3623326195977055187, guid: d7ceae2804882468f87dd7a3fa6cf6a8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3623326195977055189, guid: d7ceae2804882468f87dd7a3fa6cf6a8, type: 3}
       propertyPath: m_text
       value: Jump Froggy
@@ -5414,15 +5444,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3623326195977055189, guid: d7ceae2804882468f87dd7a3fa6cf6a8, type: 3}
       propertyPath: m_fontColor.b
-      value: 0.52156866
+      value: 0.7216981
       objectReference: {fileID: 0}
     - target: {fileID: 3623326195977055189, guid: d7ceae2804882468f87dd7a3fa6cf6a8, type: 3}
       propertyPath: m_fontColor.g
-      value: 0.41568628
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3623326195977055189, guid: d7ceae2804882468f87dd7a3fa6cf6a8, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.5529412
+      value: 0.79086244
       objectReference: {fileID: 0}
     - target: {fileID: 3623326195977055189, guid: d7ceae2804882468f87dd7a3fa6cf6a8, type: 3}
       propertyPath: m_fontSizeBase
@@ -5434,7 +5464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3623326195977055189, guid: d7ceae2804882468f87dd7a3fa6cf6a8, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4286933645
+      value: 4290314186
       objectReference: {fileID: 0}
     - target: {fileID: 3623326196027377651, guid: d7ceae2804882468f87dd7a3fa6cf6a8, type: 3}
       propertyPath: m_fontSize
@@ -5647,6 +5677,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2076996948}
     m_Modifications:
+    - target: {fileID: 8697548514040888841, guid: bb7f14a8fc92a43699e0dba5e67e5325, type: 3}
+      propertyPath: m_Color.b
+      value: 0.38649392
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697548514040888841, guid: bb7f14a8fc92a43699e0dba5e67e5325, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697548514040888841, guid: bb7f14a8fc92a43699e0dba5e67e5325, type: 3}
+      propertyPath: m_Color.r
+      value: 0.3537736
+      objectReference: {fileID: 0}
     - target: {fileID: 8697548514040888847, guid: bb7f14a8fc92a43699e0dba5e67e5325, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -5685,7 +5727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8697548514623633500, guid: bb7f14a8fc92a43699e0dba5e67e5325, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8697548514623633500, guid: bb7f14a8fc92a43699e0dba5e67e5325, type: 3}
       propertyPath: m_AnchorMax.x
