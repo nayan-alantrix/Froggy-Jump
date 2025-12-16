@@ -1,0 +1,927 @@
+fileFormatVersion: 2
+guid: 014c9fc24a36744b1ab6bb93d4bcca6b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1580
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6060a025033c4514b58446e34e5c4c8
+      internalID: 1894773278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1580
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10dcddb77f9ee46598b1d89fae9720a1
+      internalID: -1923846891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1580
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0037f4d3fe15f4f569bfc287ef6f5870
+      internalID: -89249841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_3
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1580
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c39ebc60d5a44c18fc1b4f2b575abf
+      internalID: 1650693026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 1580
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207811097f7f84558a72de4af68eb698
+      internalID: 899617346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1580
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53adbc6a3737244f697341e1edaf84ad
+      internalID: 791138434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1264
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62ff677e98df47c0a8bb359a5d73c95
+      internalID: 1314159061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_7
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1264
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15689f3f0d7b4599bed5b1095e64a01
+      internalID: -7739777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_8
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1264
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe6ce859728d744a79b3460e71e389eb
+      internalID: -1575282864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_9
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1264
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a578d03845704646bbecaf81ed65c26
+      internalID: -64325940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 1264
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94585f0193fd3412aa45231816b17b1e
+      internalID: 706923999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1264
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2440e74baff488d92ed4d60e5a4f26
+      internalID: 692137192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 948
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82a4c7550d17d4fb2b74b6cc5d91d841
+      internalID: 2073351959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_13
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 948
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d329e162afa412bbf21ee203ece33c
+      internalID: 1894138467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_14
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 948
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99e6dd9523114265999f4fc2ac409bd
+      internalID: 1554624711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_15
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 948
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60af23451e864bfebf4b67fe5ca6f7e
+      internalID: -1368074658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_16
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 948
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884b4c45bd8d24e148324342ae767522
+      internalID: -969943523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_17
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 948
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84d9942e5925491f9317cfb0a420627
+      internalID: -1536284233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 632
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb496e34a39984f2ea567ee6ff9926c0
+      internalID: -1074570980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_19
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 632
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372e74aeb5e84477eb7ea9534e5f1e46
+      internalID: 837391966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_20
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 632
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a4fa7b911c94f7db0b3a10799beb51
+      internalID: -793976438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_21
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 632
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d97ed46b6e84915bd77247b82a70e2
+      internalID: 1992710095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_22
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 632
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a74d7ac9dcdc4a0498587bda4a794ea
+      internalID: -453202182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_23
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 632
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80471c51ba8f84d7890c0d54235c387c
+      internalID: 950283329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1488546f0dba448c69bbe20885189b9e
+      internalID: 2142525819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_25
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 316
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b359fe2f549b4f86aa132fef7b2b0be
+      internalID: -1636812401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_26
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 316
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8841ef16c0d30423f9fb95bda95e2deb
+      internalID: -1390030443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_27
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 316
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb3b54cfe3804b409107024d47b601a
+      internalID: 1309853522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_28
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 316
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341f11935f9ed4948809bcd09e4cb7cc
+      internalID: -2133663981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_29
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 316
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be81a8cc458449bcb1460cb4c7b901c
+      internalID: -1380206639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8764657fe1c5e4b13b548c3f99e7a667
+      internalID: -1399632192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_31
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 0
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a07a1b2df3f94bfa971de5591b7832a
+      internalID: -1675039011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_32
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 0
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 579bdd73e8b684d9ba5dd948c4758fe2
+      internalID: 427724980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_33
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 0
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72c4d142b6a94f1892e5e38c1b6d634
+      internalID: 769941857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_34
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 0
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e988cc231bc94129b4494b43eb4442b
+      internalID: -206444897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_35
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 0
+        width: 313
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020529f8628794ceaa3022ba27c26630
+      internalID: -1690449306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_0: 1894773278
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_1: -1923846891
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_10: 706923999
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_11: 692137192
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_12: 2073351959
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_13: 1894138467
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_14: 1554624711
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_15: -1368074658
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_16: -969943523
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_17: -1536284233
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_18: -1074570980
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_19: 837391966
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_2: -89249841
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_20: -793976438
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_21: 1992710095
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_22: -453202182
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_23: 950283329
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_24: 2142525819
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_25: -1636812401
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_26: -1390030443
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_27: 1309853522
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_28: -2133663981
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_29: -1380206639
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_3: 1650693026
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_30: -1399632192
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_31: -1675039011
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_32: 427724980
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_33: 769941857
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_34: -206444897
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_35: -1690449306
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_4: 899617346
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_5: 791138434
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_6: 1314159061
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_7: -7739777
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_8: -1575282864
+      A-vector-art-sprite-of-a-bright-green-frog-in-a-di-256px-36 (1)_9: -64325940
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
