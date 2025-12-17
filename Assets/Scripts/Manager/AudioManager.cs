@@ -63,8 +63,6 @@ public enum SoundType
 {
     Music,
     ButtonClick,
-    GameStart,
-    CarPull,
-    LevelWin,
+    FrogJump,
     LevelLose
 }

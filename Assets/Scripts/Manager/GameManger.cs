@@ -8,6 +8,7 @@ public class GameManger : MonoBehaviour
     [Header("Managers")]
     private LevelManager levelManager;
     [SerializeField] private UIManager uiManager;
+    [SerializeField] private AudioManager audioManager;
 
     private void Awake()
     {
@@ -46,5 +47,7 @@ public class GameManger : MonoBehaviour
     {
         return playerController.transform;
     }
+
+    public AudioManager GetAudioManager()=> audioManager;
 
 }

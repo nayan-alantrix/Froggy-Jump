@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator MoveToTarget(RectTransform targetBubble)
     {
+            gameManger.GetAudioManager().PlaySFX(SoundType.FrogJump);
         isMoving = true;
 
         // Get world positions BEFORE changing parent

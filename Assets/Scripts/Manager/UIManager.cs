@@ -81,9 +81,16 @@ public class UIManager : MonoBehaviour
             musicSource.volume = volume;
             sfxSource.volume = volume;
             PlayerPrefs.SetInt(volumeKey, volume);
+            gameManger.GetAudioManager().PlaySFX(SoundType.ButtonClick);
         });
-        infoBtn.onClick.AddListener(()=>infoPanel.SetActive(true));
-        closeInfoPanelsBtn.onClick.AddListener(() => infoPanel.SetActive(false));
+        infoBtn.onClick.AddListener(()=>{
+            infoPanel.SetActive(true);
+            gameManger.GetAudioManager().PlaySFX(SoundType.ButtonClick);
+        });
+        closeInfoPanelsBtn.onClick.AddListener(() =>{
+            infoPanel.SetActive(false);
+            gameManger.GetAudioManager().PlaySFX(SoundType.ButtonClick);
+        });
         quit.onClick.AddListener(Application.Quit);
         //gameplay
         gameplay_pauseBtn.onClick.AddListener(OnGamePause);
@@ -129,6 +136,7 @@ public class UIManager : MonoBehaviour
 
     private void OnGameStart()
     {        
+        gameManger.GetAudioManager().PlaySFX(SoundType.ButtonClick);
         isPlaying = true;
         gameManger.OnGameStart();
         mainMenuPanel.SetActive(false);
@@ -138,6 +146,7 @@ public class UIManager : MonoBehaviour
 
     private void OnGamePause()
     {
+        gameManger.GetAudioManager().PlaySFX(SoundType.ButtonClick);
         isPlaying = false;
         pauseMenu_highScoreText.text = "High Score : "+highScore.ToString();
         gameManger.OnGamePause();
@@ -146,6 +155,8 @@ public class UIManager : MonoBehaviour
 
     public void OnGameResume()
     {
+
+        gameManger.GetAudioManager().PlaySFX(SoundType.ButtonClick);
         isPlaying = true;
         gameManger.OnGameResume();
         pauseMenuPanel.SetActive(false);
@@ -154,6 +165,8 @@ public class UIManager : MonoBehaviour
 
     public void OnGameOver()
     {
+
+        gameManger.GetAudioManager().PlaySFX(SoundType.LevelLose);
         gameOverPanel.SetActive(true);
         isPlaying = false;
         if(score > highScore)
