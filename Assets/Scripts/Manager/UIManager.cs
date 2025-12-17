@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,13 +11,18 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button playBtn;
     [SerializeField] private Button volumeBtn;
     [SerializeField] private Button infoBtn;
+    [SerializeField] private Button closeInfoPanelsBtn;
+    [SerializeField] private Button quit;
 
     [Header("GamePlay Panel")]
     [SerializeField] private GameObject gamePlayPanel;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private Button gameplay_pauseBtn;
     [Header("Pause Menu Panel")]
     [SerializeField]private GameObject pauseMenuPanel;
 
     [SerializeField] private Button pauseMenu_restartBtn;
+    [SerializeField] private Button pauseMenu_resumeBtn;
     [SerializeField] private Button pauseMenu_homeBtn;
     
     [Header("Game Over Panel")]
@@ -31,6 +37,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Sprite soundMuteSprite;
 
     private int volume = 1;
+    //Score
+    private int score = 0;
 
     //player prefs key
     private readonly string volumeKey = "Volume";
@@ -42,8 +50,6 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        DeactivateAllPanels();
-        mainMenuPanel.SetActive(true);
         //default volume
         volume = PlayerPrefs.GetInt(volumeKey, 1);
         musicSource.volume = volume;
@@ -51,12 +57,8 @@ public class UIManager : MonoBehaviour
         if(volume == 1) volumeBtn.image.sprite = soundSprite;
         else volumeBtn.image.sprite = soundMuteSprite;
         //settingUp button listeners
-        playBtn.onClick.AddListener(()=>{
-            gameManger.OnGameStart();
-            mainMenuPanel.SetActive(false);
-            gamePlayPanel.SetActive(true);
-        });
-
+        //main menu
+        playBtn.onClick.AddListener(OnGameStart);
         volumeBtn.onClick.AddListener(() =>
         {
             if(volume == 0)
@@ -73,6 +75,58 @@ public class UIManager : MonoBehaviour
             sfxSource.volume = volume;
             PlayerPrefs.SetInt(volumeKey, volume);
         });
+        infoBtn.onClick.AddListener(()=>infoPanel.SetActive(true));
+        closeInfoPanelsBtn.onClick.AddListener(() => infoPanel.SetActive(false));
+        quit.onClick.AddListener(Application.Quit);
+        //gameplay
+        gameplay_pauseBtn.onClick.AddListener(OnGamePause);
+        //pause menu
+        pauseMenu_homeBtn.onClick.AddListener(OnHomeBtnClick);
+        pauseMenu_restartBtn.onClick.AddListener(()=>{
+            OnGameStart();
+            pauseMenuPanel.SetActive(false);
+        });
+        pauseMenu_resumeBtn.onClick.AddListener(OnGameResume);
+        
+        //game over
+        gameOver_homeBtn.onClick.AddListener(OnHomeBtnClick); //game over
+        gameOver_restartBtn.onClick.AddListener(()=>{
+            OnGameStart();
+            gameOverPanel.SetActive(false);
+        });
+
+    }
+
+    private void Start()
+    {
+        OnHomeBtnClick();
+    }
+
+    private void OnHomeBtnClick()
+    {
+        DeactivateAllPanels();
+        mainMenuPanel.SetActive(true);
+        gameManger.Reset();
+    }
+
+    private void OnGameStart()
+    {        
+        gameManger.OnGameStart();
+        mainMenuPanel.SetActive(false);
+        gamePlayPanel.SetActive(true);
+    }
+
+    private void OnGamePause()
+    {
+        gameManger.OnGamePause();
+        pauseMenuPanel.SetActive(true);
+    }
+
+    public void OnGameResume()
+    {
+        gameManger.OnGameResume();
+        pauseMenuPanel.SetActive(false);
+        gamePlayPanel.SetActive(true);
     }
 
     public void OnGameOver()

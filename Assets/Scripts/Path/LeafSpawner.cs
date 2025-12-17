@@ -1,23 +1,22 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class BubbleSpawner : MonoBehaviour
+public class LeafSpawner : MonoBehaviour
 {
     [Header("UI Prefab")]
-    [SerializeField] private BubbleMove tilePrefab;   // UI tile you want to spawn
+    [SerializeField] private LeafMove tilePrefab;   // UI tile you want to spawn
 
     [Header("Spawn Points (3 Positions)")]
     [SerializeField] private RectTransform[] spawnPoints; // Assign 3 UI empty objects
+    [SerializeField] private RectTransform[] initSpanPoint;
 
     [Header("Parent Panel")]
     [SerializeField] private RectTransform parentPanel;   // Where tiles will be placed
 
     [Header("Spawn Settings")]
     [SerializeField] private float spawnDelay = 1f;      // Time between spawns
-    [SerializeField] private int maxBubbles = 10;        // Max number of bubbles to spawn (-1 for infinite)
 
-    private List<BubbleMove> bubbles;
-    private int bubblesSpawned = 0;
+    private List<LeafMove> bubbles;
     [SerializeField]private bool isActive = false;
     private float nextSpawnTime = 0f;
     private GameManger gameManger;
@@ -28,24 +27,23 @@ public class BubbleSpawner : MonoBehaviour
 
     private void Start()
     {
-        bubbles = new List<BubbleMove>();
+        bubbles = new List<LeafMove>();
         if (spawnPoints.Length != 3)
         {
             Debug.LogError("SpawnPoints must contain exactly 3 points!");
             return;
         }
+        Reset();
     }
 
     private void Update()
     {
         if (!isActive) return;
         nextSpawnTime -= Time.deltaTime;
-
         // Check if it's time to spawn
         if ( nextSpawnTime <= 0)
         {
                 SpawnSingleBubble();
-                bubblesSpawned++;
                 nextSpawnTime = spawnDelay;
         }
     }
@@ -55,25 +53,44 @@ public class BubbleSpawner : MonoBehaviour
         int randomIndex = Random.Range(0, spawnPoints.Length);
         RectTransform spawnPoint = spawnPoints[randomIndex];
 
-        BubbleMove tile = Instantiate<BubbleMove>(tilePrefab, parentPanel);
+        LeafMove tile = Instantiate<LeafMove>(tilePrefab, parentPanel);
         bubbles.Add(tile);
+        tile.SetRefrence(this);
         tile.gameObject.transform.localPosition = spawnPoint.localPosition;
         tile.SetMovementState(true);
     }
     public void StartGame()
-    {foreach (BubbleMove move in bubbles)
+    {
+        Reset();
+        GameResume();
+    }
+
+    public void Reset()
+    {
+        foreach (LeafMove move in bubbles)
         {
             Destroy(move.gameObject);
         }
         bubbles.Clear();
-        bubblesSpawned = 0;
-        isActive = true;
+        for(int i=0; i<initSpanPoint.Length; i++)
+        {           
+            LeafMove b = Instantiate<LeafMove>(tilePrefab, parentPanel);
+            bubbles.Add(b);
+            b.SetRefrence(this);
+            b.gameObject.transform.localPosition = initSpanPoint[i].localPosition;
+            if (i == 0)
+            {
+                gameManger.GetPlayerTransform().SetParent(b.gameObject.transform);
+                gameManger.GetPlayerTransform().localPosition = Vector3.zero;
+            }
+        }
         nextSpawnTime = 0;
     }
+
     public void GameResume()
     {
         isActive = true;
-        foreach (BubbleMove move in bubbles)
+        foreach (LeafMove move in bubbles)
         {
             move.SetMovementState(true);
         }
@@ -82,9 +99,14 @@ public class BubbleSpawner : MonoBehaviour
     public void GamePause()
     {
         isActive = false;
-        foreach (BubbleMove move in bubbles)
+        foreach (LeafMove move in bubbles)
         {
             move.SetMovementState(false);
         }
+    }
+    public void RemoveBubble(LeafMove bubbleMove)
+    {
+        bubbles.Remove(bubbleMove);
+        Destroy(bubbleMove.gameObject);
     }
 }

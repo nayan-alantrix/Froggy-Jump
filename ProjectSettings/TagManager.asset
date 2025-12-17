@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Bubble
   - Spikes
+  - BlockingLayer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BlockingUI
   - Water
   - UI
   - 

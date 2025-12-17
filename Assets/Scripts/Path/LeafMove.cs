@@ -1,12 +1,17 @@
 using UnityEngine;
 
-public class BubbleMove : MonoBehaviour
+public class LeafMove : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;      // Downward speed
     [SerializeField] private float destroyY = -10f; // Auto destroy when off screen
     [SerializeField] private RectTransform rectTransform;
 
     private bool isActive = false;
+    private LeafSpawner leafSpawner;
+    public void SetRefrence(LeafSpawner leafSpawner)
+    {
+        this.leafSpawner = leafSpawner;
+    }
 
     void Update()
     {
@@ -17,7 +22,7 @@ public class BubbleMove : MonoBehaviour
         // Destroy if it goes below screen
         if (transform.position.y < destroyY)
         {
-            Destroy(gameObject);
+            leafSpawner.RemoveBubble(this);
         }
     }
 

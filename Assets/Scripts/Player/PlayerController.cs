@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,12 +12,13 @@ public class PlayerController : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private RectTransform playerTransform;
+    [SerializeField] private Animator animator;
     [SerializeField] private Canvas canvas;
 
-    private bool isMoving = false;
-    private bool isActive = false;
+    [SerializeField] private bool isMoving = false;
+    [SerializeField]private bool isActive = false;
     private RectTransform currentBubble;
-    private Transform originalParent;  // Store canvas parent for movement
+    public Transform originalParent {get; private set;} // Store canvas parent for movement
     private GameManger gameManger;
     public void SetRefrences(GameManger gameManger)
     {
@@ -26,22 +29,16 @@ public class PlayerController : MonoBehaviour
     {
         if (playerTransform == null)
             playerTransform = GetComponent<RectTransform>();
-        
         originalParent = canvas.transform;
     }
 
     private void Update()
     {
-        if (!isActive) return;
+        if(!isActive)return;
         if (Input.GetMouseButtonDown(0) && !isMoving)
         {
             TryMoveToBubble();
         }
-    }
-
-    public void Reset()
-    {
-        isActive = true;
     }
 
     void TryMoveToBubble()
@@ -55,23 +52,33 @@ public class PlayerController : MonoBehaviour
     }
 
     RectTransform GetClickedBubble()
+{
+    PointerEventData pointerData = new PointerEventData(EventSystem.current);
+    pointerData.position = Input.mousePosition;
+    List<RaycastResult> results = new List<RaycastResult>();
+    EventSystem.current.RaycastAll(pointerData, results);
+    
+    foreach (RaycastResult result in results)
     {
-        UnityEngine.EventSystems.PointerEventData pointerData = new UnityEngine.EventSystems.PointerEventData(UnityEngine.EventSystems.EventSystem.current);
-        pointerData.position = Input.mousePosition;
-
-        System.Collections.Generic.List<UnityEngine.EventSystems.RaycastResult> results = new System.Collections.Generic.List<UnityEngine.EventSystems.RaycastResult>();
-        UnityEngine.EventSystems.EventSystem.current.RaycastAll(pointerData, results);
-
-        foreach (UnityEngine.EventSystems.RaycastResult result in results)
+        GameObject hitObject = result.gameObject;
+        
+        // If we hit a bubble first, it's clickable
+        if (hitObject.CompareTag("Bubble"))
         {
-            if (result.gameObject.CompareTag("Bubble"))
-            {
-                return result.gameObject.GetComponent<RectTransform>();
-            }
+            return hitObject.GetComponent<RectTransform>();
         }
-
-        return null;
+        
+        // If we hit a blocking layer/UI element before the bubble
+        // (adjust the tag/layer check based on your setup)
+        if (hitObject.layer == LayerMask.NameToLayer("BlockingUI") || 
+            hitObject.CompareTag("BlockingLayer"))
+        {
+            return null; // Bubble is blocked
+        }
     }
+    
+    return null;
+}
 
     IEnumerator MoveToTarget(RectTransform targetBubble)
     {
@@ -127,16 +134,23 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.CompareTag("Spikes"))
         {
             gameManger.OnGameOver();
-            isActive = false;
-            Debug.Log("Game Over");
         }
     }
-
     public RectTransform GetCurrentBubble()
     {
         return currentBubble;
     }
+    public void Reset()
+    {
+        animator.SetBool("stuned", false);
+    }
 
+    public void OnGameStart()
+    {
+        isActive = true;
+        isMoving = false;
+        animator.SetBool("stuned", false);
+    }
     public void GamePause()
     {
         isActive = false;
@@ -150,5 +164,7 @@ public class PlayerController : MonoBehaviour
     public void GameOver()
     {
         isActive = false;
+        Debug.Log("Game Over");
+        animator.SetBool("stuned", true);
     }
 }

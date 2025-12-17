@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameManger : MonoBehaviour
 {
     [Header("Controllers")]
-    [SerializeField] private BubbleSpawner bubbleSpawner;
+    [SerializeField] private LeafSpawner bubbleSpawner;
     [SerializeField] private PlayerController playerController;
     [Header("Managers")]
     private LevelManager levelManager;
@@ -15,6 +15,10 @@ public class GameManger : MonoBehaviour
 
         levelManager.SetRefrences(this, bubbleSpawner, playerController);
         uiManager.SetRefrences(this);
+    }
+    public void Reset()
+    {
+        levelManager.Reset();
     }
 
     public void OnGameStart()
@@ -36,6 +40,11 @@ public class GameManger : MonoBehaviour
     {
         levelManager.OnGameOver();
         uiManager.OnGameOver();
+    }
+
+    public Transform GetPlayerTransform()
+    {
+        return playerController.transform;
     }
 
 }
