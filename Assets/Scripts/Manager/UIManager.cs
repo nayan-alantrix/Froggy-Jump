@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     [Header("Main Menu panel")]
     [SerializeField] private GameObject mainMenuPanel;
+    [SerializeField] private TextMeshProUGUI mainmenu_highScoreText;
     [SerializeField] private GameObject infoPanel;
     [SerializeField] private Button playBtn;
     [SerializeField] private Button volumeBtn;
@@ -20,6 +21,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button gameplay_pauseBtn;
     [Header("Pause Menu Panel")]
     [SerializeField]private GameObject pauseMenuPanel;
+    [SerializeField] private TextMeshProUGUI pauseMenu_highScoreText;
 
     [SerializeField] private Button pauseMenu_restartBtn;
     [SerializeField] private Button pauseMenu_resumeBtn;
@@ -29,6 +31,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private Button gameOver_restartBtn;
     [SerializeField] private Button gameOver_homeBtn;
+    [SerializeField] private TextMeshProUGUI gameOver_highscoretext;
+    [SerializeField] private TextMeshProUGUI gameOver_scoretext;
 
     [Header("Audio")]
     [SerializeField] private AudioSource musicSource;
@@ -38,10 +42,13 @@ public class UIManager : MonoBehaviour
 
     private int volume = 1;
     //Score
-    private int score = 0;
+    private float score = 0;
+    private int highScore = 0;
+    private bool isPlaying = false;
 
     //player prefs key
     private readonly string volumeKey = "Volume";
+    private readonly string highscoreKey = "HighScore";
     private GameManger gameManger;
     public void SetRefrences(GameManger gameManger)
     {
@@ -100,10 +107,21 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         OnHomeBtnClick();
+        highScore = PlayerPrefs.GetInt(highscoreKey, 0);
+        mainmenu_highScoreText.text = "High Score : "+highScore.ToString();
+    }
+
+    private void Update()
+    {
+        if(!isPlaying) return;
+        score+=Time.deltaTime;
+        scoreText.text = "Score : "+(int)score;
     }
 
     private void OnHomeBtnClick()
     {
+
+        mainmenu_highScoreText.text = "High Score : "+highScore.ToString();
         DeactivateAllPanels();
         mainMenuPanel.SetActive(true);
         gameManger.Reset();
@@ -111,19 +129,24 @@ public class UIManager : MonoBehaviour
 
     private void OnGameStart()
     {        
+        isPlaying = true;
         gameManger.OnGameStart();
         mainMenuPanel.SetActive(false);
         gamePlayPanel.SetActive(true);
+        score = 0;
     }
 
     private void OnGamePause()
     {
+        isPlaying = false;
+        pauseMenu_highScoreText.text = "High Score : "+highScore.ToString();
         gameManger.OnGamePause();
         pauseMenuPanel.SetActive(true);
     }
 
     public void OnGameResume()
     {
+        isPlaying = true;
         gameManger.OnGameResume();
         pauseMenuPanel.SetActive(false);
         gamePlayPanel.SetActive(true);
@@ -132,6 +155,15 @@ public class UIManager : MonoBehaviour
     public void OnGameOver()
     {
         gameOverPanel.SetActive(true);
+        isPlaying = false;
+        if(score > highScore)
+        {
+            highScore = (int)score;
+            PlayerPrefs.SetInt(highscoreKey, highScore);
+        }
+        gameOver_scoretext.text = "Score : " + (int)score;
+        gameOver_highscoretext.text = "High Score : "+highScore.ToString();
+    
     }
     private void DeactivateAllPanels()
     {

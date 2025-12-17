@@ -14,12 +14,22 @@ public class LeafSpawner : MonoBehaviour
     [SerializeField] private RectTransform parentPanel;   // Where tiles will be placed
 
     [Header("Spawn Settings")]
-    [SerializeField] private float spawnDelay = 1f;      // Time between spawns
+    [SerializeField] private float baseSpawnDelay = 1f;      // Initial spawn delay
+    [SerializeField] private float minSpawnDelay = 0.3f;     // Minimum spawn delay
+
+    [Header("Speed Settings")]
+    [SerializeField] private float baseSpeed = 3f;
+    [SerializeField] private float speedIncreaseRate = 0.1f; // Speed increase per second
+    [SerializeField] private float maxSpeed = 8f;
 
     private List<LeafMove> bubbles;
-    [SerializeField]private bool isActive = false;
+    [SerializeField] private bool isActive = false;
     private float nextSpawnTime = 0f;
+    private float currentSpeed;
+    private float currentSpawnDelay;
+    private float gameTime;
     private GameManger gameManger;
+
     public void SetRefrences(GameManger gameManger)
     {
         this.gameManger = gameManger;
@@ -39,12 +49,28 @@ public class LeafSpawner : MonoBehaviour
     private void Update()
     {
         if (!isActive) return;
+
+        // Increase speed over time
+        gameTime += Time.deltaTime;
+        currentSpeed = Mathf.Min(baseSpeed + (speedIncreaseRate * gameTime), maxSpeed);
+
+        // Calculate spawn delay based on speed (inversely proportional)
+        // As speed increases from baseSpeed to maxSpeed, spawn delay decreases from baseSpawnDelay to minSpawnDelay
+        float speedRatio = (currentSpeed - baseSpeed) / (maxSpeed - baseSpeed);
+        currentSpawnDelay = Mathf.Lerp(baseSpawnDelay, minSpawnDelay, speedRatio);
+
+        // Update all existing bubbles to current speed
+        foreach (LeafMove move in bubbles)
+        {
+            move.SetSpeed(currentSpeed);
+        }
+
         nextSpawnTime -= Time.deltaTime;
         // Check if it's time to spawn
-        if ( nextSpawnTime <= 0)
+        if (nextSpawnTime <= 0)
         {
-                SpawnSingleBubble();
-                nextSpawnTime = spawnDelay;
+            SpawnSingleBubble();
+            nextSpawnTime = currentSpawnDelay;
         }
     }
 
@@ -56,12 +82,17 @@ public class LeafSpawner : MonoBehaviour
         LeafMove tile = Instantiate<LeafMove>(tilePrefab, parentPanel);
         bubbles.Add(tile);
         tile.SetRefrence(this);
+        tile.SetSpeed(currentSpeed);
         tile.gameObject.transform.localPosition = spawnPoint.localPosition;
         tile.SetMovementState(true);
     }
+
     public void StartGame()
     {
         Reset();
+        gameTime = 0f;
+        currentSpeed = baseSpeed;
+        currentSpawnDelay = baseSpawnDelay;
         GameResume();
     }
 
@@ -72,11 +103,12 @@ public class LeafSpawner : MonoBehaviour
             Destroy(move.gameObject);
         }
         bubbles.Clear();
-        for(int i=0; i<initSpanPoint.Length; i++)
-        {           
+        for (int i = 0; i < initSpanPoint.Length; i++)
+        {
             LeafMove b = Instantiate<LeafMove>(tilePrefab, parentPanel);
             bubbles.Add(b);
             b.SetRefrence(this);
+            b.SetSpeed(baseSpeed);
             b.gameObject.transform.localPosition = initSpanPoint[i].localPosition;
             if (i == 0)
             {
@@ -85,6 +117,9 @@ public class LeafSpawner : MonoBehaviour
             }
         }
         nextSpawnTime = 0;
+        gameTime = 0f;
+        currentSpeed = baseSpeed;
+        currentSpawnDelay = baseSpawnDelay;
     }
 
     public void GameResume()
@@ -92,6 +127,7 @@ public class LeafSpawner : MonoBehaviour
         isActive = true;
         foreach (LeafMove move in bubbles)
         {
+            move.SetSpeed(currentSpeed);
             move.SetMovementState(true);
         }
     }
@@ -104,6 +140,7 @@ public class LeafSpawner : MonoBehaviour
             move.SetMovementState(false);
         }
     }
+
     public void RemoveBubble(LeafMove bubbleMove)
     {
         bubbles.Remove(bubbleMove);

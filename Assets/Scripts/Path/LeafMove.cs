@@ -8,14 +8,21 @@ public class LeafMove : MonoBehaviour
 
     private bool isActive = false;
     private LeafSpawner leafSpawner;
+
     public void SetRefrence(LeafSpawner leafSpawner)
     {
         this.leafSpawner = leafSpawner;
     }
 
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
+
     void Update()
     {
-        if (!isActive)return;
+        if (!isActive) return;
+
         // Move object downward in 2D
         transform.Translate(Vector2.down * speed * Time.deltaTime);
 
